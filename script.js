@@ -60,7 +60,6 @@ async function fetchData(query) {
 async function searchWithQuery(query) {
     try {
         const data = await fetchData(query);
-        console.log(data);
     } catch (error) {
         console.log("Error:", error);
     }

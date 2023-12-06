@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="speechToText-container">
+        <div class="speechToText-speechReco-container">
+            <div class="speechToText-speechReco_title">
+                <h1>Speech recognition</h1>
+                <p class="speechToText-paragraph">Click on start and say something!</p>
+            </div>
+            <div class="speechToText-speechReco_text">
+                <textarea disabled class="speechToText-speechReco_textarea" placeholder="Your text..."></textarea>
+            </div>
+            <div class="speechToText-speechReco_buttons">
+                <select class="speechToText-speechReco_dropdown">
+                    <option value="pl-PL" id="polski">Polski</option>
+                    <option value="en-UK" id="english">English</option>
+                    <option value="de-DE" id="deutsch">Deutsch</option>
+                </select>
+                <button class="speechToText-speechReco_startBtn">Start!</button>
+            </div>
+        </div>
+        <div class="speechToText-output_container">
+            
+            
+        </div>
+    </div>
+    
+<script>
+    function onSyneriseLoad() {
+        SR.init({
+            'trackerKey':'FEE539C0-D206-A685-88F8-0E433FCDFD1D',
+        });
+    }
+    (function(s,y,n,e,r,i,se){s['SyneriseObjectNamespace']=r;s[r]=s[r]||[],
+     s[r]._t=1*new Date(),s[r]._i=0,s[r]._l=i;var z=y.createElement(n),
+     se=y.getElementsByTagName(n)[0];z.async=1;z.src=e;se.parentNode.insertBefore(z,se);
+     z.onload=z.onreadystatechange=function(){var rdy=z.readyState;
+     if(!rdy||/complete|loaded/.test(z.readyState)){s[i]();z.onload = null;
+     z.onreadystatechange=null;}};})(window,document,'script',
+     '//web.snrbox.com/synerise-javascript-sdk.min.js','SR', 'onSyneriseLoad');
+</script>
+
+</body>
+</html>
